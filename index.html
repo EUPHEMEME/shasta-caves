@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Honest 3-D at Machine Speed — X3D projects</title>
+<style>
+ :root{color-scheme:dark}
+ html,body{margin:0;background:#0e0f12;color:#d7d2c6;
+   font-family:-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.55}
+ .wrap{max-width:1060px;margin:0 auto;padding:48px 24px 100px}
+ h1{font-size:30px;margin:0 0 8px;color:#f1e9d6;font-weight:680;letter-spacing:.2px}
+ .lede{font-size:15.5px;opacity:.84;max-width:840px;margin:0 0 8px}
+ .meta{font-size:12.5px;opacity:.55;margin-bottom:10px}
+ h2{font-size:21px;color:#ece0c4;font-weight:620;margin:42px 0 2px}
+ .blurb{font-size:13.5px;opacity:.72;max-width:860px;margin:2px 0 6px}
+ .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:15px;margin-top:14px}
+ .card{display:block;background:#16171c;border:1px solid #25272f;border-radius:11px;
+   padding:15px 17px;text-decoration:none;color:inherit;transition:border-color .15s,transform .15s}
+ .card:hover{border-color:#5a6072;transform:translateY(-2px)}
+ .card b{color:#f1e9d6;font-size:15px;display:block;margin-bottom:4px}
+ .card span{font-size:12.8px;opacity:.7}
+ .tag{font-size:10px;font-weight:700;letter-spacing:.05em;padding:2px 7px;border-radius:10px;margin-left:6px}
+ .live{background:#16361f;color:#7fe39a}.pdf{background:#2a2330;color:#caa6e6}.repo{background:#1d2733;color:#8fbce6}
+ .note{margin-top:44px;font-size:12.5px;opacity:.6;border-top:1px solid #25272f;padding-top:16px;line-height:1.7}
+ code{background:#1c1e25;padding:1px 6px;border-radius:4px}
+ a.inl{color:#8fbce6}
+</style></head>
+<body><div class="wrap">
+ <h1>Honest 3-D at Machine Speed</h1>
+ <p class="lede">Provenance-disciplined, standards-conformant X3D, authored by a human–AI
+  pair. Two Pleistocene fossil caves rebuilt to scale, a rigged HAnim character pipeline,
+  and a reusable toolchain — every scene procedural and to scale, every drawing a faithful
+  trace of a public-domain original. No AI imagery, no invented geometry.</p>
+ <p class="meta">The 3-D scenes below render live in your browser via the X_ITE X3D player
+  (give each a few seconds to load). Best in a desktop browser.</p>
+
+ <h2>The caves — true to the drawings</h2>
+ <p class="blurb">The documented half of the archive: the cave as the 1903–06 survey
+  recorded it — traced plates, to-scale plan &amp; topography, and the bone-horizon sections.</p>
+ <div class="grid">
+  <a class="card" href="documented_caves.html"><b>Documented caves launcher<span class="tag live">LIVE</span></b>
+   <span>Survey drawings, the to-scale plan + 3-D topography, and the bone-horizon section scenes.</span></a>
+  <a class="card" href="caves.html"><b>The reconstructions<span class="tag live">LIVE</span></b>
+   <span>The lit, PBR, dripstone-clad immersive cave views — openly interpretive, captioned as such.</span></a>
+ </div>
+
+ <h2>HAnim LOA5 — rigged characters</h2>
+ <p class="blurb">The canonical 150-joint HAnim Level-of-Articulation-5 figure, driven by the
+  standard's own motion cycles.</p>
+ <div class="grid">
+  <a class="card" href="running_human.html"><b>The runner<span class="tag live">LIVE</span></b>
+   <span>The real HAnim figure running a slalom course, gait locked to ground speed.</span></a>
+  <a class="card" href="classroom_skeleton.html"><b>The living classroom skeleton<span class="tag live">LIVE</span></b>
+   <span>PBR bones + clickable Walk/Run/Jump/Stand buttons on a chalkboard.</span></a>
+ </div>
+
+ <h2>Papers</h2>
+ <p class="blurb">Drafts (watermarked).</p>
+ <div class="grid">
+  <a class="card" href="docs/paper/honest-3d.pdf"><b>★ Honest 3-D at Machine Speed<span class="tag pdf">PDF</span></b>
+   <span>The vision paper: the whole program — toolchain, characters, the caves flagship, roadmap, ethics. 26 pp.</span></a>
+  <a class="card" href="docs/paper/x3d-mcp-hanim-demo.pdf"><b>HAnim classroom case study<span class="tag pdf">PDF</span></b>
+   <span>AI-aided X3D authoring via the MCP toolchain and the rigged-skeleton demo.</span></a>
+  <a class="card" href="docs/paper/merriam-caves.pdf"><b>The caves heritage archive<span class="tag pdf">PDF</span></b>
+   <span>The earlier caves-focused write-up; now a component of the vision paper.</span></a>
+  <a class="card" href="docs/paper/visual-changelog.pdf"><b>Visual changelog<span class="tag pdf">PDF</span></b>
+   <span>A picture history of the build.</span></a>
+ </div>
+
+ <h2>Toolchain</h2>
+ <div class="grid">
+  <a class="card" href="https://github.com/Web3DConsortium/x3d_mcp/pull/10"><b>X3D MCP — render backend + validators<span class="tag repo">PR&nbsp;#10</span></b>
+   <span>The X_ITE render backend, X3DUOM semantic validators, and autofix, contributed upstream to the Web3D x3d_mcp.</span></a>
+ </div>
+
+ <p class="note">Built by a human and Claude (Claude Code) working as a pair, entirely through
+  the open Web3D toolchain. Both caves are Winnemem Wintu sacred sites on the McCloud River,
+  flooded by Shasta Dam (1945); they are treated with care, not as scenery, and the protected
+  location is not published. Renders use <a class="inl" href="https://create3000.github.io/x_ite/">X_ITE</a>.</p>
+</div></body></html>
