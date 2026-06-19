@@ -6,12 +6,17 @@
   <meta name="rights" content="Interpretive: Footprint extent and apex height (read from the plan/section), exact slope and surface relief. LAYOUT: global_position/level_order/stream_bbox are interpretive staging for the unified walkable level, "/>
 </head>
 <Scene>
-  <Transform translation="0.00 -6.00 0.00"><Shape><Appearance><Material diffuseColor="0.60 0.58 0.54" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="48.00 0.40 30.00"/></Shape></Transform>
-  <Transform translation="0.00 6.00 0.00"><Shape><Appearance><Material diffuseColor="0.60 0.58 0.54" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="48.00 0.40 30.00"/></Shape></Transform>
-  <Transform translation="0.00 0.00 -15.00"><Shape><Appearance><Material diffuseColor="0.60 0.58 0.54" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="48.00 12.00 0.40"/></Shape></Transform>
-  <Transform translation="0.00 0.00 15.00"><Shape><Appearance><Material diffuseColor="0.60 0.58 0.54" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="48.00 12.00 0.40"/></Shape></Transform>
-  <PointLight location="0 3.0 0" color="0.95 0.6 0.3" intensity="0.9" radius="53"/>
-  <Transform translation="0.00 -5.10 0.00"><Shape><Appearance><Material diffuseColor="0.95 0.6 0.3" emissiveColor="0.95 0.6 0.3" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="1.00 1.40 1.00"/></Shape></Transform>
-  <Transform translation="0.00 -2.60 0.00"><Billboard axisOfRotation="0 1 0"><Shape><Appearance><Material diffuseColor="0.95 0.6 0.3" emissiveColor="0.95 0.6 0.3"/></Appearance><Text string='"Southeast Breccia Fan (floor sub-space)" "Sinclair 1904 p.3 (fan form), p.8 (SE-fan structure, all stratum A cemented breccia), p.11 (Arctotherium skull + Ursus on the SE-fan surface)."'><FontStyle justify='"MIDDLE" "MIDDLE"' size="1.20" spacing="1.15"/></Text></Shape></Billboard></Transform>
+  <Transform translation="0.00 -6.00 0.00"><Shape><Appearance><Material diffuseColor="0.66 0.63 0.58" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="48.00 0.40 30.00"/></Shape></Transform>
+  <Transform translation="0.00 6.00 0.00"><Shape><Appearance><Material diffuseColor="0.66 0.63 0.58" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="48.00 0.40 30.00"/></Shape></Transform>
+  <Transform translation="0.00 0.00 -15.00"><Shape><Appearance><Material diffuseColor="0.66 0.63 0.58" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="48.00 12.00 0.40"/></Shape></Transform>
+  <Transform translation="0.00 0.00 15.00"><Shape><Appearance><Material diffuseColor="0.66 0.63 0.58" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="48.00 12.00 0.40"/></Shape></Transform>
+  <PointLight location="0 3.0 0" color="0.95 0.6 0.3" intensity="1.35" radius="55"/>
+  <Transform translation="0.00 -0.96 0.00"><Shape><Appearance><Material diffuseColor="0.60 0.50 0.40" specularColor="0.05 0.05 0.05" shininess="0.1"/></Appearance><Cone bottomRadius="13.80" height="10.32"/></Shape></Transform>
+  <Transform translation="0.00 -5.50 0.00"><Shape><Appearance><Material diffuseColor="0.40 0.36 0.30" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="24.00 0.90 15.00"/></Shape></Transform>
+  <Transform translation="0.00 -4.30 0.00"><Shape><Appearance><Material diffuseColor="0.47 0.41 0.33" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="24.00 0.90 15.00"/></Shape></Transform>
+  <Transform translation="0.00 -3.10 0.00"><Shape><Appearance><Material diffuseColor="0.54 0.46 0.36" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="24.00 0.90 15.00"/></Shape></Transform>
+  <Transform translation="0.00 -1.90 0.00"><Shape><Appearance><Material diffuseColor="0.61 0.51 0.39" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="24.00 0.90 15.00"/></Shape></Transform>
+  <Transform translation="0.00 -0.70 0.00"><Shape><Appearance><Material diffuseColor="0.68 0.56 0.42" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="24.00 0.90 15.00"/></Shape></Transform>
+  <Transform translation="0.00 -3.40 0.00"><Billboard axisOfRotation="0 1 0"><Shape><Appearance><Material diffuseColor="0.95 0.6 0.3" emissiveColor="0.95 0.6 0.3"/></Appearance><Text string='"Southeast Breccia Fan (floor sub-space)" "Sinclair 1904 p.3 (fan form), p.8 (SE-fan structure, all stratum A cemented breccia), p.11 (Arctotherium skull + Ursus on the SE-fan surface)."'><FontStyle justify='"MIDDLE" "MIDDLE"' size="1.08"/></Text></Shape></Billboard></Transform>
 </Scene>
 </X3D>

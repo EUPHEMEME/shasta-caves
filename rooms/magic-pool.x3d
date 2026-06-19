@@ -6,12 +6,14 @@
   <meta name="rights" content="Interpretive: The number, size, and placement of the pools, designating one as THE Magic Pool, its luminous glow and PointLight, and all surrounding lighting and detail. LAYOUT: global_position/level_order/stream_b"/>
 </head>
 <Scene>
-  <Transform translation="0.00 -0.07 0.00"><Shape><Appearance><Material diffuseColor="0.60 0.58 0.54" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="16.00 0.40 16.00"/></Shape></Transform>
-  <Transform translation="0.00 0.07 0.00"><Shape><Appearance><Material diffuseColor="0.60 0.58 0.54" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="16.00 0.40 16.00"/></Shape></Transform>
-  <Transform translation="0.00 0.00 -8.00"><Shape><Appearance><Material diffuseColor="0.60 0.58 0.54" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="16.00 0.15 0.40"/></Shape></Transform>
-  <Transform translation="0.00 0.00 8.00"><Shape><Appearance><Material diffuseColor="0.60 0.58 0.54" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="16.00 0.15 0.40"/></Shape></Transform>
-  <PointLight location="0 0.0 0" color="0.45 0.72 0.88" intensity="0.9" radius="18"/>
-  <Transform translation="0.00 0.83 0.00"><Shape><Appearance><Material diffuseColor="0.45 0.72 0.88" emissiveColor="0.45 0.72 0.88" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="1.00 1.40 1.00"/></Shape></Transform>
-  <Transform translation="0.00 0.04 0.00"><Billboard axisOfRotation="0 1 0"><Shape><Appearance><Material diffuseColor="0.45 0.72 0.88" emissiveColor="0.45 0.72 0.88"/></Appearance><Text string='"the Magic Pool" "Furlong, E.L. (1906) Am. J. Sci. 22:235-247"'><FontStyle justify='"MIDDLE" "MIDDLE"' size="0.70" spacing="1.15"/></Text></Shape></Billboard></Transform>
+  <Transform translation="0.00 -0.07 0.00"><Shape><Appearance><Material diffuseColor="0.66 0.63 0.58" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="16.00 0.40 16.00"/></Shape></Transform>
+  <Transform translation="0.00 0.07 0.00"><Shape><Appearance><Material diffuseColor="0.66 0.63 0.58" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="16.00 0.40 16.00"/></Shape></Transform>
+  <Transform translation="0.00 0.00 -8.00"><Shape><Appearance><Material diffuseColor="0.66 0.63 0.58" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="16.00 0.15 0.40"/></Shape></Transform>
+  <Transform translation="0.00 0.00 8.00"><Shape><Appearance><Material diffuseColor="0.66 0.63 0.58" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="16.00 0.15 0.40"/></Shape></Transform>
+  <PointLight location="0 0.0 0" color="0.45 0.72 0.88" intensity="1.35" radius="18"/>
+  <Transform translation="0.00 0.00 0.00"><Shape><Appearance><Material diffuseColor="0.10 0.50 0.55" emissiveColor="0.05 0.32 0.34" transparency="0.35" specularColor="0.6 0.7 0.8" shininess="0.7"/></Appearance><Cylinder radius="7.00" height="0.2"/></Shape></Transform>
+  <PointLight location="0 3 0" color="0.5 0.85 0.9" intensity="1.3" radius="34"/>
+  <Transform translation="0.00 4.00 0.00"><Billboard axisOfRotation="0 1 0"><Shape><Appearance><Material diffuseColor="0.6 0.9 0.95" emissiveColor="0.6 0.9 0.95"/></Appearance><Text string='"the Magic Pool"'><FontStyle justify='"MIDDLE" "MIDDLE"' size="1.40"/></Text></Shape></Billboard></Transform>
+  <Transform translation="0.00 0.05 0.00"><Billboard axisOfRotation="0 1 0"><Shape><Appearance><Material diffuseColor="0.45 0.72 0.88" emissiveColor="0.45 0.72 0.88"/></Appearance><Text string='"the Magic Pool" "Furlong, E.L. (1906) Am. J. Sci. 22:235-247"'><FontStyle justify='"MIDDLE" "MIDDLE"' size="0.70"/></Text></Shape></Billboard></Transform>
 </Scene>
 </X3D>

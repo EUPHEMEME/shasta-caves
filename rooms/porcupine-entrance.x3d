@@ -6,12 +6,13 @@
   <meta name="rights" content="Interpretive: Room size and shape, the daylight shaft, lighting, floor breccia and breakdown, all surface detail. LAYOUT: global_position/level_order/stream_bbox are interpretive staging for the unified walkable le"/>
 </head>
 <Scene>
-  <Transform translation="0.00 -7.00 0.00"><Shape><Appearance><Material diffuseColor="0.60 0.58 0.54" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="16.00 0.40 14.00"/></Shape></Transform>
-  <Transform translation="0.00 7.00 0.00"><Shape><Appearance><Material diffuseColor="0.60 0.58 0.54" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="16.00 0.40 14.00"/></Shape></Transform>
-  <Transform translation="0.00 0.00 -7.00"><Shape><Appearance><Material diffuseColor="0.60 0.58 0.54" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="16.00 14.00 0.40"/></Shape></Transform>
-  <Transform translation="0.00 0.00 7.00"><Shape><Appearance><Material diffuseColor="0.60 0.58 0.54" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="16.00 14.00 0.40"/></Shape></Transform>
-  <PointLight location="0 3.5 0" color="0.45 0.72 0.88" intensity="0.9" radius="18"/>
-  <Transform translation="0.00 -6.10 0.00"><Shape><Appearance><Material diffuseColor="0.45 0.72 0.88" emissiveColor="0.45 0.72 0.88" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="1.00 1.40 1.00"/></Shape></Transform>
-  <Transform translation="0.00 -3.60 0.00"><Billboard axisOfRotation="0 1 0"><Shape><Appearance><Material diffuseColor="0.45 0.72 0.88" emissiveColor="0.45 0.72 0.88"/></Appearance><Text string='"Porcupine Entrance" "Furlong, E.L. (1906) Am. J. Sci. 22:235-247"'><FontStyle justify='"MIDDLE" "MIDDLE"' size="1.40" spacing="1.15"/></Text></Shape></Billboard></Transform>
+  <Transform translation="0.00 -7.00 0.00"><Shape><Appearance><Material diffuseColor="0.66 0.63 0.58" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="16.00 0.40 14.00"/></Shape></Transform>
+  <Transform translation="0.00 7.00 0.00"><Shape><Appearance><Material diffuseColor="0.66 0.63 0.58" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="16.00 0.40 14.00"/></Shape></Transform>
+  <Transform translation="0.00 0.00 -7.00"><Shape><Appearance><Material diffuseColor="0.66 0.63 0.58" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="16.00 14.00 0.40"/></Shape></Transform>
+  <Transform translation="0.00 0.00 7.00"><Shape><Appearance><Material diffuseColor="0.66 0.63 0.58" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="16.00 14.00 0.40"/></Shape></Transform>
+  <PointLight location="0 3.5 0" color="0.45 0.72 0.88" intensity="1.35" radius="18"/>
+  <Transform translation="0.00 2.10 0.00"><Shape><Appearance><Material diffuseColor="0.75 0.82 1.0" specularColor="0.05 0.05 0.05" shininess="0.1"/></Appearance><Cone bottomRadius="2.60" height="9.80"/></Shape></Transform>
+  <PointLight location="0 6.0 0" color="0.7 0.8 1" intensity="0.9" radius="21"/>
+  <Transform translation="0.00 -4.40 0.00"><Billboard axisOfRotation="0 1 0"><Shape><Appearance><Material diffuseColor="0.45 0.72 0.88" emissiveColor="0.45 0.72 0.88"/></Appearance><Text string='"Porcupine Entrance" "Furlong, E.L. (1906) Am. J. Sci. 22:235-247"'><FontStyle justify='"MIDDLE" "MIDDLE"' size="1.26"/></Text></Shape></Billboard></Transform>
 </Scene>
 </X3D>

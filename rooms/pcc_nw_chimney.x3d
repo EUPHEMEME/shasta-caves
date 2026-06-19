@@ -6,12 +6,11 @@
   <meta name="rights" content="Interpretive: Shaft diameter (unsurveyed), exact profile; a natural conduit, not a human entrance. LAYOUT: global_position/level_order/stream_bbox are interpretive staging for the unified walkable level, not survey"/>
 </head>
 <Scene>
-  <Transform translation="0.00 -20.50 0.00"><Shape><Appearance><Material diffuseColor="0.60 0.58 0.54" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="6.00 0.40 6.00"/></Shape></Transform>
-  <Transform translation="0.00 20.50 0.00"><Shape><Appearance><Material diffuseColor="0.60 0.58 0.54" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="6.00 0.40 6.00"/></Shape></Transform>
-  <Transform translation="0.00 0.00 -3.00"><Shape><Appearance><Material diffuseColor="0.60 0.58 0.54" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="6.00 41.00 0.40"/></Shape></Transform>
-  <Transform translation="0.00 0.00 3.00"><Shape><Appearance><Material diffuseColor="0.60 0.58 0.54" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="6.00 41.00 0.40"/></Shape></Transform>
-  <PointLight location="0 10.2 0" color="0.95 0.6 0.3" intensity="0.9" radius="45"/>
-  <Transform translation="0.00 -19.60 0.00"><Shape><Appearance><Material diffuseColor="0.95 0.6 0.3" emissiveColor="0.95 0.6 0.3" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="1.00 1.40 1.00"/></Shape></Transform>
-  <Transform translation="0.00 -17.10 0.00"><Billboard axisOfRotation="0 1 0"><Shape><Appearance><Material diffuseColor="0.95 0.6 0.3" emissiveColor="0.95 0.6 0.3"/></Appearance><Text string='"Northwest Chimney (the chute above the NW fan apex)" "Sinclair 1904 pp.3-4, Pl.5 (NW chute climbed 41 ft to an arched cavity + earth-choked fissure with live pine roots)."'><FontStyle justify='"MIDDLE" "MIDDLE"' size="1.60" spacing="1.15"/></Text></Shape></Billboard></Transform>
+  <Transform translation="0.00 -20.50 0.00"><Shape><Appearance><Material diffuseColor="0.66 0.63 0.58" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="6.00 0.40 6.00"/></Shape></Transform>
+  <Transform translation="0.00 20.50 0.00"><Shape><Appearance><Material diffuseColor="0.66 0.63 0.58" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="6.00 0.40 6.00"/></Shape></Transform>
+  <Transform translation="0.00 0.00 -3.00"><Shape><Appearance><Material diffuseColor="0.66 0.63 0.58" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="6.00 41.00 0.40"/></Shape></Transform>
+  <Transform translation="0.00 0.00 3.00"><Shape><Appearance><Material diffuseColor="0.66 0.63 0.58" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="6.00 41.00 0.40"/></Shape></Transform>
+  <PointLight location="0 10.2 0" color="0.95 0.6 0.3" intensity="1.35" radius="47"/>
+  <Transform translation="0.00 -17.90 0.00"><Billboard axisOfRotation="0 1 0"><Shape><Appearance><Material diffuseColor="0.95 0.6 0.3" emissiveColor="0.95 0.6 0.3"/></Appearance><Text string='"Northwest Chimney (the chute above the NW fan apex)" "Sinclair 1904 pp.3-4, Pl.5 (NW chute climbed 41 ft to an arched cavity + earth-choked fissure with live pine roots)."'><FontStyle justify='"MIDDLE" "MIDDLE"' size="1.50"/></Text></Shape></Billboard></Transform>
 </Scene>
 </X3D>
