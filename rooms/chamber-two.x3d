@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<X3D profile="Immersive" version="4.0">
+<head>
+  <meta name="title" content="Chamber Two (Furlongs Room) (Samwel)"/>
+  <meta name="description" content="Chamber Two (Furlongs Room) is a named lower-level space in Furlongs plan (Feranec et al. 2007 Fig. 2), reached only by a deep drop requiring climbing gear, and an excavated chamber sharing Chamber Ones stratigraphy (deepest dig 2.5 m). By "/>
+  <meta name="rights" content="Interpretive: Room size and shape, the deep floor depth, identifying the documented deep drop AS the maidens ~90 ft hole (modeled as one shaft), the exact pit geometry, speleothems, breakdown, pool placement, light"/>
+</head>
+<Scene>
+  <Transform translation="0.00 -12.00 0.00"><Shape><Appearance><Material diffuseColor="0.60 0.58 0.54" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="34.00 0.40 28.00"/></Shape></Transform>
+  <Transform translation="0.00 12.00 0.00"><Shape><Appearance><Material diffuseColor="0.60 0.58 0.54" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="34.00 0.40 28.00"/></Shape></Transform>
+  <Transform translation="0.00 0.00 -14.00"><Shape><Appearance><Material diffuseColor="0.60 0.58 0.54" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="34.00 24.00 0.40"/></Shape></Transform>
+  <Transform translation="0.00 0.00 14.00"><Shape><Appearance><Material diffuseColor="0.60 0.58 0.54" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="34.00 24.00 0.40"/></Shape></Transform>
+  <PointLight location="0 6.0 0" color="0.45 0.72 0.88" intensity="0.9" radius="37"/>
+  <Transform translation="0.00 -11.10 0.00"><Shape><Appearance><Material diffuseColor="0.45 0.72 0.88" emissiveColor="0.45 0.72 0.88" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="1.00 1.40 1.00"/></Shape></Transform>
+  <Transform translation="0.00 -8.60 0.00"><Billboard axisOfRotation="0 1 0"><Shape><Appearance><Material diffuseColor="0.45 0.72 0.88" emissiveColor="0.45 0.72 0.88"/></Appearance><Text string='"Chamber Two (Furlongs Room)" "Furlong, E.L. (1906) Am. J. Sci. 22:235-247"'><FontStyle justify='"MIDDLE" "MIDDLE"' size="1.60" spacing="1.15"/></Text></Shape></Billboard></Transform>
+</Scene>
+</X3D>

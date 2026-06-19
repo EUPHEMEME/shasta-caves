@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<X3D profile="Immersive" version="4.0">
+<head>
+  <meta name="title" content="the Gate (Samwel)"/>
+  <meta name="description" content="the Gate is a named narrow passage in Furlongs plan as redrawn by Feranec et al. (2007), joining Pleistocene Hall to Chamber One."/>
+  <meta name="rights" content="Interpretive: Its bore radius and length, the exact label position, and that it is rendered as a smooth tube; the survey gives no passage dimensions. LAYOUT: global_position/level_order/stream_bbox are interpretive"/>
+</head>
+<Scene>
+  <Transform translation="0.00 -6.00 0.00"><Shape><Appearance><Material diffuseColor="0.60 0.58 0.54" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="4.50 0.40 12.00"/></Shape></Transform>
+  <Transform translation="0.00 6.00 0.00"><Shape><Appearance><Material diffuseColor="0.60 0.58 0.54" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="4.50 0.40 12.00"/></Shape></Transform>
+  <Transform translation="0.00 0.00 -6.00"><Shape><Appearance><Material diffuseColor="0.60 0.58 0.54" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="4.50 12.00 0.40"/></Shape></Transform>
+  <Transform translation="0.00 0.00 6.00"><Shape><Appearance><Material diffuseColor="0.60 0.58 0.54" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="4.50 12.00 0.40"/></Shape></Transform>
+  <PointLight location="0 3.0 0" color="0.45 0.72 0.88" intensity="0.9" radius="13"/>
+  <Transform translation="0.00 -5.10 0.00"><Shape><Appearance><Material diffuseColor="0.45 0.72 0.88" emissiveColor="0.45 0.72 0.88" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="1.00 1.40 1.00"/></Shape></Transform>
+  <Transform translation="0.00 -2.60 0.00"><Billboard axisOfRotation="0 1 0"><Shape><Appearance><Material diffuseColor="0.45 0.72 0.88" emissiveColor="0.45 0.72 0.88"/></Appearance><Text string='"the Gate" "Furlong, E.L. (1906) Am. J. Sci. 22:235-247"'><FontStyle justify='"MIDDLE" "MIDDLE"' size="1.20" spacing="1.15"/></Text></Shape></Billboard></Transform>
+</Scene>
+</X3D>

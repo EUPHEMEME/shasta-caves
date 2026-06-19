@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<X3D profile="Immersive" version="4.0">
+<head>
+  <meta name="title" content="Merriams Chamber (Samwel)"/>
+  <meta name="description" content="Merriams Chamber is a named space in Furlongs plan as redrawn by Feranec et al. (2007); excavation 1903-1906 by E. L. Furlong, J. C. Merriam and W. J. Sinclair."/>
+  <meta name="rights" content="Interpretive: Room size and shape, speleothems, breakdown, lighting, and all surface detail. LAYOUT: global_position/level_order/stream_bbox are interpretive staging for the unified walkable level, not survey geome"/>
+</head>
+<Scene>
+  <Transform translation="0.00 -11.00 0.00"><Shape><Appearance><Material diffuseColor="0.60 0.58 0.54" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="28.00 0.40 24.00"/></Shape></Transform>
+  <Transform translation="0.00 11.00 0.00"><Shape><Appearance><Material diffuseColor="0.60 0.58 0.54" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="28.00 0.40 24.00"/></Shape></Transform>
+  <Transform translation="0.00 0.00 -12.00"><Shape><Appearance><Material diffuseColor="0.60 0.58 0.54" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="28.00 22.00 0.40"/></Shape></Transform>
+  <Transform translation="0.00 0.00 12.00"><Shape><Appearance><Material diffuseColor="0.60 0.58 0.54" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="28.00 22.00 0.40"/></Shape></Transform>
+  <PointLight location="0 5.5 0" color="0.45 0.72 0.88" intensity="0.9" radius="31"/>
+  <Transform translation="0.00 -10.10 0.00"><Shape><Appearance><Material diffuseColor="0.45 0.72 0.88" emissiveColor="0.45 0.72 0.88" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="1.00 1.40 1.00"/></Shape></Transform>
+  <Transform translation="0.00 -7.60 0.00"><Billboard axisOfRotation="0 1 0"><Shape><Appearance><Material diffuseColor="0.45 0.72 0.88" emissiveColor="0.45 0.72 0.88"/></Appearance><Text string='"Merriams Chamber" "Furlong, E.L. (1906) Am. J. Sci. 22:235-247"'><FontStyle justify='"MIDDLE" "MIDDLE"' size="1.60" spacing="1.15"/></Text></Shape></Billboard></Transform>
+</Scene>
+</X3D>

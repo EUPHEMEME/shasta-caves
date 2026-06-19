@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<X3D profile="Immersive" version="4.0">
+<head>
+  <meta name="title" content="The Great Pit (42 ft entrance descent / rope ladder) (Potter Creek)"/>
+  <meta name="description" content="The 42 ft vertical descent itself, the rope-ladder access and the stalagmite-pillar anchor; its position near the NW end of the chamber."/>
+  <meta name="rights" content="Interpretive: Pit plan diameter (unsurveyed; ~8 ft in the model), the daylight beam, dust motes and all lighting. LAYOUT: this is the start_room; global_position/level_order/stream_bbox are interpretive staging for"/>
+</head>
+<Scene>
+  <Transform translation="0.00 -21.00 0.00"><Shape><Appearance><Material diffuseColor="0.60 0.58 0.54" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="8.00 0.40 8.00"/></Shape></Transform>
+  <Transform translation="0.00 21.00 0.00"><Shape><Appearance><Material diffuseColor="0.60 0.58 0.54" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="8.00 0.40 8.00"/></Shape></Transform>
+  <Transform translation="0.00 0.00 -4.00"><Shape><Appearance><Material diffuseColor="0.60 0.58 0.54" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="8.00 42.00 0.40"/></Shape></Transform>
+  <Transform translation="0.00 0.00 4.00"><Shape><Appearance><Material diffuseColor="0.60 0.58 0.54" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="8.00 42.00 0.40"/></Shape></Transform>
+  <PointLight location="0 10.5 0" color="0.95 0.6 0.3" intensity="0.9" radius="46"/>
+  <Transform translation="0.00 -20.10 0.00"><Shape><Appearance><Material diffuseColor="0.95 0.6 0.3" emissiveColor="0.95 0.6 0.3" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="1.00 1.40 1.00"/></Shape></Transform>
+  <Transform translation="0.00 -17.60 0.00"><Billboard axisOfRotation="0 1 0"><Shape><Appearance><Material diffuseColor="0.95 0.6 0.3" emissiveColor="0.95 0.6 0.3"/></Appearance><Text string='"The Great Pit (42 ft entrance descent / rope ladder)" "Sinclair 1904 p.3 (42-ft vertical descent, rope ladder, stalagmite pillar anchor)."'><FontStyle justify='"MIDDLE" "MIDDLE"' size="1.60" spacing="1.15"/></Text></Shape></Billboard></Transform>
+</Scene>
+</X3D>

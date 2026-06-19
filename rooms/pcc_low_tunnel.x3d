@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<X3D profile="Immersive" version="4.0">
+<head>
+  <meta name="title" content="Buried Galleries -- Low Narrow Tunnel (NW prolongation) (Potter Creek)"/>
+  <meta name="description" content="Existence, the 11 ft length, the low/narrow character and its position at the NW end of the principal gallery."/>
+  <meta name="rights" content="Interpretive: Width and height (unsurveyed; described only as low and narrow). LAYOUT: global_position/level_order/stream_bbox are interpretive staging for the unified walkable level, not survey geometry."/>
+</head>
+<Scene>
+  <Transform translation="0.00 -1.50 0.00"><Shape><Appearance><Material diffuseColor="0.60 0.58 0.54" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="11.00 0.40 4.00"/></Shape></Transform>
+  <Transform translation="0.00 1.50 0.00"><Shape><Appearance><Material diffuseColor="0.60 0.58 0.54" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="11.00 0.40 4.00"/></Shape></Transform>
+  <Transform translation="0.00 0.00 -2.00"><Shape><Appearance><Material diffuseColor="0.60 0.58 0.54" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="11.00 3.00 0.40"/></Shape></Transform>
+  <Transform translation="0.00 0.00 2.00"><Shape><Appearance><Material diffuseColor="0.60 0.58 0.54" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="11.00 3.00 0.40"/></Shape></Transform>
+  <PointLight location="0 0.8 0" color="0.95 0.6 0.3" intensity="0.9" radius="12"/>
+  <Transform translation="0.00 -0.60 0.00"><Shape><Appearance><Material diffuseColor="0.95 0.6 0.3" emissiveColor="0.95 0.6 0.3" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="1.00 1.40 1.00"/></Shape></Transform>
+  <Transform translation="0.00 0.90 0.00"><Billboard axisOfRotation="0 1 0"><Shape><Appearance><Material diffuseColor="0.95 0.6 0.3" emissiveColor="0.95 0.6 0.3"/></Appearance><Text string='"Buried Galleries -- Low Narrow Tunnel (NW prolongation)" "Sinclair 1904 p.9."'><FontStyle justify='"MIDDLE" "MIDDLE"' size="0.70" spacing="1.15"/></Text></Shape></Billboard></Transform>
+</Scene>
+</X3D>

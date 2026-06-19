@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<X3D profile="Immersive" version="4.0">
+<head>
+  <meta name="title" content="Northwest Breccia Fan (floor sub-space) (Potter Creek)"/>
+  <meta name="description" content="The fan landform sloping from the NW end and coalescing at mid-chamber, its apex under the NW chimney, the full A-H sequence with stratum As 13.5 ft greatest clay depth; that C (ash) and the G chocolate-mud are barren."/>
+  <meta name="rights" content="Interpretive: Footprint (~50 x 30 ft read off the plan), apex height, and that the cumulative A-H stack is a render composite of greatest thicknesses, NOT additive measured depth. LAYOUT: global_position/level_orde"/>
+</head>
+<Scene>
+  <Transform translation="0.00 -6.75 0.00"><Shape><Appearance><Material diffuseColor="0.60 0.58 0.54" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="50.00 0.40 30.00"/></Shape></Transform>
+  <Transform translation="0.00 6.75 0.00"><Shape><Appearance><Material diffuseColor="0.60 0.58 0.54" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="50.00 0.40 30.00"/></Shape></Transform>
+  <Transform translation="0.00 0.00 -15.00"><Shape><Appearance><Material diffuseColor="0.60 0.58 0.54" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="50.00 13.50 0.40"/></Shape></Transform>
+  <Transform translation="0.00 0.00 15.00"><Shape><Appearance><Material diffuseColor="0.60 0.58 0.54" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="50.00 13.50 0.40"/></Shape></Transform>
+  <PointLight location="0 3.4 0" color="0.95 0.6 0.3" intensity="0.9" radius="55"/>
+  <Transform translation="0.00 -5.85 0.00"><Shape><Appearance><Material diffuseColor="0.95 0.6 0.3" emissiveColor="0.95 0.6 0.3" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="1.00 1.40 1.00"/></Shape></Transform>
+  <Transform translation="0.00 -3.35 0.00"><Billboard axisOfRotation="0 1 0"><Shape><Appearance><Material diffuseColor="0.95 0.6 0.3" emissiveColor="0.95 0.6 0.3"/></Appearance><Text string='"Northwest Breccia Fan (floor sub-space)" "Sinclair 1904 pp.3-7 (fan form + coalescence), p.5 stratigraphy A-H, p.11 (C ash and chocolate mud barren), p.19"'><FontStyle justify='"MIDDLE" "MIDDLE"' size="1.35" spacing="1.15"/></Text></Shape></Billboard></Transform>
+</Scene>
+</X3D>

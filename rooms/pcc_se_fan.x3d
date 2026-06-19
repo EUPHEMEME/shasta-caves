@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<X3D profile="Immersive" version="4.0">
+<head>
+  <meta name="title" content="Southeast Breccia Fan (floor sub-space) (Potter Creek)"/>
+  <meta name="description" content="The fan landform sloping from the SE end and coalescing at mid-chamber, its apex under the SE chimney, that it is structureless cemented breccia (lumped as stratum A), and the documented Arctotherium+Ursus surface occurrence."/>
+  <meta name="rights" content="Interpretive: Footprint extent and apex height (read from the plan/section), exact slope and surface relief. LAYOUT: global_position/level_order/stream_bbox are interpretive staging for the unified walkable level, "/>
+</head>
+<Scene>
+  <Transform translation="0.00 -6.00 0.00"><Shape><Appearance><Material diffuseColor="0.60 0.58 0.54" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="48.00 0.40 30.00"/></Shape></Transform>
+  <Transform translation="0.00 6.00 0.00"><Shape><Appearance><Material diffuseColor="0.60 0.58 0.54" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="48.00 0.40 30.00"/></Shape></Transform>
+  <Transform translation="0.00 0.00 -15.00"><Shape><Appearance><Material diffuseColor="0.60 0.58 0.54" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="48.00 12.00 0.40"/></Shape></Transform>
+  <Transform translation="0.00 0.00 15.00"><Shape><Appearance><Material diffuseColor="0.60 0.58 0.54" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="48.00 12.00 0.40"/></Shape></Transform>
+  <PointLight location="0 3.0 0" color="0.95 0.6 0.3" intensity="0.9" radius="53"/>
+  <Transform translation="0.00 -5.10 0.00"><Shape><Appearance><Material diffuseColor="0.95 0.6 0.3" emissiveColor="0.95 0.6 0.3" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="1.00 1.40 1.00"/></Shape></Transform>
+  <Transform translation="0.00 -2.60 0.00"><Billboard axisOfRotation="0 1 0"><Shape><Appearance><Material diffuseColor="0.95 0.6 0.3" emissiveColor="0.95 0.6 0.3"/></Appearance><Text string='"Southeast Breccia Fan (floor sub-space)" "Sinclair 1904 p.3 (fan form), p.8 (SE-fan structure, all stratum A cemented breccia), p.11 (Arctotherium skull + Ursus on the SE-fan surface)."'><FontStyle justify='"MIDDLE" "MIDDLE"' size="1.20" spacing="1.15"/></Text></Shape></Billboard></Transform>
+</Scene>
+</X3D>

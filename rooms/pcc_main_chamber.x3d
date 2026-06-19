@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<X3D profile="Immersive" version="4.0">
+<head>
+  <meta name="title" content="Main Chamber (the great room) (Potter Creek)"/>
+  <meta name="description" content="107 ft length, ~30 ft max width, ~75 ft roof above the lowest floor point, NW-SE trend, west-wall overhang and pendants, the Altar / two Rock Benches / Fallen Block, loose-block scatter and the 1.5 ft bat-guano band along the east wall."/>
+  <meta name="rights" content="Interpretive: Exact wall rugosity and colour, all speleothem geometry, pools, breakdown placement, the scale figure, all lighting, and the ~10-20 ft ceiling profile traced from the Pl.11 section. LAYOUT: global_pos"/>
+</head>
+<Scene>
+  <Transform translation="0.00 -37.50 0.00"><Shape><Appearance><Material diffuseColor="0.60 0.58 0.54" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="107.00 0.40 30.00"/></Shape></Transform>
+  <Transform translation="0.00 37.50 0.00"><Shape><Appearance><Material diffuseColor="0.60 0.58 0.54" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="107.00 0.40 30.00"/></Shape></Transform>
+  <Transform translation="0.00 0.00 -15.00"><Shape><Appearance><Material diffuseColor="0.60 0.58 0.54" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="107.00 75.00 0.40"/></Shape></Transform>
+  <Transform translation="0.00 0.00 15.00"><Shape><Appearance><Material diffuseColor="0.60 0.58 0.54" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="107.00 75.00 0.40"/></Shape></Transform>
+  <PointLight location="0 18.8 0" color="0.95 0.6 0.3" intensity="0.9" radius="118"/>
+  <Transform translation="0.00 -36.60 0.00"><Shape><Appearance><Material diffuseColor="0.95 0.6 0.3" emissiveColor="0.95 0.6 0.3" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="1.00 1.40 1.00"/></Shape></Transform>
+  <Transform translation="0.00 -34.10 0.00"><Billboard axisOfRotation="0 1 0"><Shape><Appearance><Material diffuseColor="0.95 0.6 0.3" emissiveColor="0.95 0.6 0.3"/></Appearance><Text string='"Main Chamber (the great room)" "Sinclair 1904 p.3 (107 x ~30 x ~75, NW-SE, west overhang + pendants), Pl.1, Pl.4, Pl.14"'><FontStyle justify='"MIDDLE" "MIDDLE"' size="1.60" spacing="1.15"/></Text></Shape></Billboard></Transform>
+</Scene>
+</X3D>

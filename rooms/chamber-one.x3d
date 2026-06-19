@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<X3D profile="Immersive" version="4.0">
+<head>
+  <meta name="title" content="Chamber One (Samwel)"/>
+  <meta name="description" content="Chamber One is a named space in Furlongs plan (Feranec et al. 2007 Fig. 2) and an excavated chamber: earth+breccia (30-140 cm) -&gt; flowstone (2.5-10 cm) -&gt; breccia (60 cm) -&gt; gravel (10-45 cm) -&gt; flowstone cap (3 cm) -&gt; reddis"/>
+  <meta name="rights" content="Interpretive: Room size and shape, speleothems, breakdown, exact pool placement, lighting; the dig stratigraphy rendered as a generic breccia floor. LAYOUT: global_position/level_order/stream_bbox are interpretive "/>
+</head>
+<Scene>
+  <Transform translation="0.00 -13.00 0.00"><Shape><Appearance><Material diffuseColor="0.60 0.58 0.54" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="32.00 0.40 26.00"/></Shape></Transform>
+  <Transform translation="0.00 13.00 0.00"><Shape><Appearance><Material diffuseColor="0.60 0.58 0.54" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="32.00 0.40 26.00"/></Shape></Transform>
+  <Transform translation="0.00 0.00 -13.00"><Shape><Appearance><Material diffuseColor="0.60 0.58 0.54" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="32.00 26.00 0.40"/></Shape></Transform>
+  <Transform translation="0.00 0.00 13.00"><Shape><Appearance><Material diffuseColor="0.60 0.58 0.54" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="32.00 26.00 0.40"/></Shape></Transform>
+  <PointLight location="0 6.5 0" color="0.45 0.72 0.88" intensity="0.9" radius="35"/>
+  <Transform translation="0.00 -12.10 0.00"><Shape><Appearance><Material diffuseColor="0.45 0.72 0.88" emissiveColor="0.45 0.72 0.88" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="1.00 1.40 1.00"/></Shape></Transform>
+  <Transform translation="0.00 -9.60 0.00"><Billboard axisOfRotation="0 1 0"><Shape><Appearance><Material diffuseColor="0.45 0.72 0.88" emissiveColor="0.45 0.72 0.88"/></Appearance><Text string='"Chamber One" "Furlong, E.L. (1906) Am. J. Sci. 22:235-247"'><FontStyle justify='"MIDDLE" "MIDDLE"' size="1.60" spacing="1.15"/></Text></Shape></Billboard></Transform>
+</Scene>
+</X3D>

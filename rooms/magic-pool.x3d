@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<X3D profile="Immersive" version="4.0">
+<head>
+  <meta name="title" content="the Magic Pool (Samwel)"/>
+  <meta name="description" content="Samwel is the Cave of the Magic Pools with several standing water pools; Winnemem Wintu medicine men bathed in the pools to gain magic strength (sacred site; the Lost Maiden Olchanolmet tradition)."/>
+  <meta name="rights" content="Interpretive: The number, size, and placement of the pools, designating one as THE Magic Pool, its luminous glow and PointLight, and all surrounding lighting and detail. LAYOUT: global_position/level_order/stream_b"/>
+</head>
+<Scene>
+  <Transform translation="0.00 -0.07 0.00"><Shape><Appearance><Material diffuseColor="0.60 0.58 0.54" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="16.00 0.40 16.00"/></Shape></Transform>
+  <Transform translation="0.00 0.07 0.00"><Shape><Appearance><Material diffuseColor="0.60 0.58 0.54" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="16.00 0.40 16.00"/></Shape></Transform>
+  <Transform translation="0.00 0.00 -8.00"><Shape><Appearance><Material diffuseColor="0.60 0.58 0.54" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="16.00 0.15 0.40"/></Shape></Transform>
+  <Transform translation="0.00 0.00 8.00"><Shape><Appearance><Material diffuseColor="0.60 0.58 0.54" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="16.00 0.15 0.40"/></Shape></Transform>
+  <PointLight location="0 0.0 0" color="0.45 0.72 0.88" intensity="0.9" radius="18"/>
+  <Transform translation="0.00 0.83 0.00"><Shape><Appearance><Material diffuseColor="0.45 0.72 0.88" emissiveColor="0.45 0.72 0.88" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="1.00 1.40 1.00"/></Shape></Transform>
+  <Transform translation="0.00 0.04 0.00"><Billboard axisOfRotation="0 1 0"><Shape><Appearance><Material diffuseColor="0.45 0.72 0.88" emissiveColor="0.45 0.72 0.88"/></Appearance><Text string='"the Magic Pool" "Furlong, E.L. (1906) Am. J. Sci. 22:235-247"'><FontStyle justify='"MIDDLE" "MIDDLE"' size="0.70" spacing="1.15"/></Text></Shape></Billboard></Transform>
+</Scene>
+</X3D>
