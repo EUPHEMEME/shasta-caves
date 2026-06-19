@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<X3D profile="Immersive" version="4.0">
+<head>
+  <meta name="title" content="Shasta Caves — interconnected hub"/>
+  <meta name="description" content="Hub world (hub-and-spoke per X3dWorldInterconnects): Anchor portals to Merriam's Shasta County fossil-cave worlds, each landing at a named arrival Viewpoint; a proximity-paged fauna exhibit demonstrates deferred Inline streaming."/>
+  <meta name="generationMethod" content="hand-authored hub; spokes trace:potrace; no-AI-imagery"/>
+</head>
+<Scene>
+  <NavigationInfo type='"EXAMINE" "WALK" "ANY"' headlight="true" avatarSize="0.4 1.6 0.6" speed="6"/>
+  <Background skyColor="0.05 0.06 0.08 0.10 0.11 0.13" groundColor="0.06 0.06 0.05 0.10 0.10 0.09" skyAngle="1.2"/>
+  <DirectionalLight direction="-0.3 -0.75 -0.5" intensity="0.85" color="0.95 0.93 0.86"/>
+  <DirectionalLight direction="0.45 -0.35 0.35" intensity="0.35" color="0.7 0.74 0.85"/>
+
+  <!-- Landing point: every return Anchor in a spoke world targets shasta_hub.x3d#Hub -->
+  <Viewpoint DEF="Hub" description="Hub - the caves switchboard" position="0 1.7 15" orientation="0 1 0 0"/>
+
+  <!-- ground -->
+  <Transform translation="0 -0.05 0">
+    <Shape><Appearance><Material diffuseColor="0.26 0.27 0.25" specularColor="0.05 0.05 0.05" shininess="0.1"/></Appearance>
+      <Box size="46 0.1 46"/></Shape></Transform>
+
+  <!-- title -->
+  <Transform translation="0 4.4 -7">
+    <Shape><Appearance><Material diffuseColor="0.86 0.81 0.71" emissiveColor="0.22 0.2 0.15"/></Appearance>
+      <Text string='"SHASTA COUNTY CAVES" "Merriam excavations, 1902-1904"'>
+        <FontStyle justify='"MIDDLE" "MIDDLE"' size="1.15" spacing="1.1"/></Text></Shape></Transform>
+
+  <!-- PORTAL: Potter Creek Cave (Anchor -> named arrival Viewpoint) -->
+  <Transform translation="-7 0 -2">
+    <Anchor description="Enter Potter Creek Cave" url='"potter_creek_cave.x3d#Hero"'>
+      <Shape><Appearance><Material diffuseColor="0.5 0.46 0.4" specularColor="0.1 0.1 0.1" shininess="0.15"/></Appearance>
+        <Cylinder radius="0.85" height="2.4"/></Shape>
+      <Transform translation="0 1.9 0"><Shape><Appearance><Material diffuseColor="0.74 0.32 0.22" emissiveColor="0.12 0.04 0.02"/></Appearance>
+        <Sphere radius="0.55"/></Shape></Transform>
+    </Anchor>
+    <Transform translation="0 -1.0 1.1"><Shape><Appearance><Material diffuseColor="0.9 0.86 0.78" emissiveColor="0.18 0.17 0.15"/></Appearance>
+      <Text string='"POTTER CREEK"'><FontStyle justify='"MIDDLE" "MIDDLE"' size="0.55"/></Text></Shape></Transform>
+  </Transform>
+
+  <!-- PORTAL: Samwel Cave -->
+  <Transform translation="7 0 -2">
+    <Anchor description="Enter Samwel Cave" url='"samwel_cave.x3d#Hero"'>
+      <Shape><Appearance><Material diffuseColor="0.5 0.46 0.4" specularColor="0.1 0.1 0.1" shininess="0.15"/></Appearance>
+        <Cylinder radius="0.85" height="2.4"/></Shape>
+      <Transform translation="0 1.9 0"><Shape><Appearance><Material diffuseColor="0.3 0.5 0.7" emissiveColor="0.04 0.08 0.12"/></Appearance>
+        <Sphere radius="0.55"/></Shape></Transform>
+    </Anchor>
+    <Transform translation="0 -1.0 1.1"><Shape><Appearance><Material diffuseColor="0.9 0.86 0.78" emissiveColor="0.18 0.17 0.15"/></Appearance>
+      <Text string='"SAMWEL"'><FontStyle justify='"MIDDLE" "MIDDLE"' size="0.55"/></Text></Shape></Transform>
+  </Transform>
+
+  <!-- PORTAL: the stratigraphic column (default viewpoint; no #fragment yet) -->
+  <Transform translation="0 0 -5">
+    <Anchor description="The excavated strata column" url='"potter_creek_strata.x3d#Arrival"'>
+      <Shape><Appearance><Material diffuseColor="0.46 0.4 0.32"/></Appearance>
+        <Box size="0.9 2.6 0.9"/></Shape>
+    </Anchor>
+    <Transform translation="0 -1.6 0.8"><Shape><Appearance><Material diffuseColor="0.9 0.86 0.78" emissiveColor="0.18 0.17 0.15"/></Appearance>
+      <Text string='"STRATA"'><FontStyle justify='"MIDDLE" "MIDDLE"' size="0.5"/></Text></Shape></Transform>
+  </Transform>
+
+  <!-- EXHIBIT: the fauna plate as a deferred Inline, proximity-paged.
+       Walk near the pedestal -> ProximitySensor.isActive=TRUE -> Inline.load=TRUE -> it streams in. -->
+  <Transform translation="0 0 5">
+    <Shape><Appearance><Material diffuseColor="0.38 0.38 0.42" specularColor="0.1 0.1 0.12" shininess="0.2"/></Appearance>
+      <Box size="3 0.4 3"/></Shape>
+    <ProximitySensor DEF="ProxFauna" size="12 7 12" center="0 1.5 0"/>
+    <Transform translation="0 0.4 0">
+      <Inline DEF="FaunaInline" load="false" url='"fauna_plate.x3d"' bboxCenter="0 1.5 0" bboxSize="4 3 4"/></Transform>
+    <Transform translation="0 -0.4 1.4"><Shape><Appearance><Material diffuseColor="0.9 0.86 0.78" emissiveColor="0.18 0.17 0.15"/></Appearance>
+      <Text string='"FAUNA  (approach to load)"'><FontStyle justify='"MIDDLE" "MIDDLE"' size="0.42"/></Text></Shape></Transform>
+  </Transform>
+
+  <ROUTE fromNode="ProxFauna" fromField="isActive" toNode="FaunaInline" toField="load"/>
+</Scene>
+</X3D>
