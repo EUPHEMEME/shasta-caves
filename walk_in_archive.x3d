@@ -5,10 +5,10 @@
   <meta name="description" content="Every surveyed room of both caves at true scale in one coordinate space; rooms page in by ProximitySensor-&gt;Inline.load and dither out of global Fog; walkable ramp connectors (incl. the great-pit and ~90 ft switchbacks). WALK/FLY. Built from cave_rooms_manifest.json (Sinclair 1904; Furlong 1906; Feranec et al. 2007)."/>
 </head>
 <Scene>
-  <NavigationInfo type='"WALK" "FLY" "EXAMINE" "ANY"' headlight="false" avatarSize="0.4 1.7 0.6" speed="14"/>
+  <NavigationInfo type='"FLY" "ANY"' headlight="true" avatarSize="0.4 1.7 0.6" speed="14"/>
   <Background skyColor="0.015 0.015 0.02 0.015 0.015 0.02" groundColor="0.01 0.01 0.012"/>
-  <Fog fogType="LINEAR" color="0.015 0.015 0.02" visibilityRange="48"/>
-  <Viewpoint DEF="Spawn" description="The great room (look down the chamber)" position="46 13 -2" orientation="0 1 0 -1.5708" fieldOfView="1.05"/>
+  <Fog fogType="LINEAR" color="0.015 0.015 0.02" visibilityRange="80"/>
+  <Viewpoint DEF="Spawn" description="The great room (look down the chamber)" position="46 5 -2" orientation="0 1 0 -1.5708" fieldOfView="1.05"/>
   <DirectionalLight direction="0.2 -0.8 -0.3" intensity="0.32" color="0.7 0.74 0.85"/>
   <Transform translation="139.00 30.00 0.00"><Billboard axisOfRotation="0 1 0"><Shape><Appearance><Material diffuseColor="0.7 0.55 0.4" emissiveColor="0.7 0.55 0.4"/></Appearance><Text string='"~ 5 km of McCloud River omitted ~" "interpretive connector -- the two caves are not joined in reality"'><FontStyle justify='"MIDDLE" "MIDDLE"' size="2.20"/></Text></Shape></Billboard></Transform>
   <Transform translation="-36.00 42.00 0.00"><Shape><Appearance><Material diffuseColor="0.52 0.49 0.44" emissiveColor="0 0 0" specularColor="0.04 0.04 0.04" shininess="0.06"/></Appearance><Box size="24.00 0.40 6.00"/></Shape></Transform>
@@ -63,16 +63,16 @@
   <Transform translation="15.0 21.0 0.0"><Inline DEF="R_pcc_great_pit" load="true" url='"rooms/pcc_great_pit.x3d"' bboxCenter="0 0 0" bboxSize="8.0 42.0 8.0"/></Transform>
   <Transform translation="60.0 37.5 0.0"><Inline DEF="R_pcc_main_chamber" load="true" url='"rooms/pcc_main_chamber.x3d"' bboxCenter="0 0 0" bboxSize="107.0 75.0 30.0"/></Transform>
   <Transform translation="30.0 6.8 0.0"><Inline DEF="R_pcc_nw_fan" load="true" url='"rooms/pcc_nw_fan.x3d"' bboxCenter="0 0 0" bboxSize="50.0 13.5 30.0"/></Transform>
-  <Transform translation="32.0 34.0 0.0"><Inline DEF="R_pcc_nw_chimney" load="false" url='"rooms/pcc_nw_chimney.x3d"' bboxCenter="0 0 0" bboxSize="6.0 41.0 6.0"/></Transform>
-  <Transform translation="2.0 3.0 8.0"><Inline DEF="R_pcc_nw_grotto" load="false" url='"rooms/pcc_nw_grotto.x3d"' bboxCenter="0 0 0" bboxSize="8.0 6.0 8.0"/></Transform>
-  <Transform translation="30.0 2.0 28.0"><Inline DEF="R_pcc_buried_galleries" load="false" url='"rooms/pcc_buried_galleries.x3d"' bboxCenter="0 0 0" bboxSize="42.0 8.0 8.0"/></Transform>
-  <Transform translation="4.0 -2.5 28.0"><Inline DEF="R_pcc_low_tunnel" load="false" url='"rooms/pcc_low_tunnel.x3d"' bboxCenter="0 0 0" bboxSize="11.0 3.0 4.0"/></Transform>
-  <Transform translation="30.0 1.0 42.0"><Inline DEF="R_pcc_semicircular_passage" load="false" url='"rooms/pcc_semicircular_passage.x3d"' bboxCenter="0 0 0" bboxSize="15.0 6.0 8.0"/></Transform>
-  <Transform translation="88.0 6.0 0.0"><Inline DEF="R_pcc_se_fan" load="false" url='"rooms/pcc_se_fan.x3d"' bboxCenter="0 0 0" bboxSize="48.0 12.0 30.0"/></Transform>
-  <Transform translation="92.0 27.0 0.0"><Inline DEF="R_pcc_se_chimney" load="false" url='"rooms/pcc_se_chimney.x3d"' bboxCenter="0 0 0" bboxSize="6.0 30.0 6.0"/></Transform>
-  <Transform translation="96.0 7.5 10.0"><Inline DEF="R_pcc_se_chute_pocket" load="false" url='"rooms/pcc_se_chute_pocket.x3d"' bboxCenter="0 0 0" bboxSize="7.0 9.0 7.0"/></Transform>
-  <Transform translation="62.0 6.0 -23.0"><Inline DEF="R_pcc_east_pocket" load="false" url='"rooms/pcc_east_pocket.x3d"' bboxCenter="0 0 0" bboxSize="15.0 4.0 4.0"/></Transform>
-  <Transform translation="165.0 30.0 0.0"><Inline DEF="R_entrance" load="false" url='"rooms/entrance.x3d"' bboxCenter="0 0 0" bboxSize="22.0 18.0 18.0"/></Transform>
+  <Transform translation="32.0 34.0 0.0"><Inline DEF="R_pcc_nw_chimney" load="true" url='"rooms/pcc_nw_chimney.x3d"' bboxCenter="0 0 0" bboxSize="6.0 41.0 6.0"/></Transform>
+  <Transform translation="2.0 3.0 8.0"><Inline DEF="R_pcc_nw_grotto" load="true" url='"rooms/pcc_nw_grotto.x3d"' bboxCenter="0 0 0" bboxSize="8.0 6.0 8.0"/></Transform>
+  <Transform translation="30.0 2.0 28.0"><Inline DEF="R_pcc_buried_galleries" load="true" url='"rooms/pcc_buried_galleries.x3d"' bboxCenter="0 0 0" bboxSize="42.0 8.0 8.0"/></Transform>
+  <Transform translation="4.0 -2.5 28.0"><Inline DEF="R_pcc_low_tunnel" load="true" url='"rooms/pcc_low_tunnel.x3d"' bboxCenter="0 0 0" bboxSize="11.0 3.0 4.0"/></Transform>
+  <Transform translation="30.0 1.0 42.0"><Inline DEF="R_pcc_semicircular_passage" load="true" url='"rooms/pcc_semicircular_passage.x3d"' bboxCenter="0 0 0" bboxSize="15.0 6.0 8.0"/></Transform>
+  <Transform translation="88.0 6.0 0.0"><Inline DEF="R_pcc_se_fan" load="true" url='"rooms/pcc_se_fan.x3d"' bboxCenter="0 0 0" bboxSize="48.0 12.0 30.0"/></Transform>
+  <Transform translation="92.0 27.0 0.0"><Inline DEF="R_pcc_se_chimney" load="true" url='"rooms/pcc_se_chimney.x3d"' bboxCenter="0 0 0" bboxSize="6.0 30.0 6.0"/></Transform>
+  <Transform translation="96.0 7.5 10.0"><Inline DEF="R_pcc_se_chute_pocket" load="true" url='"rooms/pcc_se_chute_pocket.x3d"' bboxCenter="0 0 0" bboxSize="7.0 9.0 7.0"/></Transform>
+  <Transform translation="62.0 6.0 -23.0"><Inline DEF="R_pcc_east_pocket" load="true" url='"rooms/pcc_east_pocket.x3d"' bboxCenter="0 0 0" bboxSize="15.0 4.0 4.0"/></Transform>
+  <Transform translation="165.0 30.0 0.0"><Inline DEF="R_entrance" load="true" url='"rooms/entrance.x3d"' bboxCenter="0 0 0" bboxSize="22.0 18.0 18.0"/></Transform>
   <Transform translation="147.0 13.0 12.0"><Inline DEF="R_porcupine-entrance" load="false" url='"rooms/porcupine-entrance.x3d"' bboxCenter="0 0 0" bboxSize="16.0 14.0 14.0"/></Transform>
   <Transform translation="215.0 23.0 0.0"><Inline DEF="R_pleistocene-hall" load="false" url='"rooms/pleistocene-hall.x3d"' bboxCenter="0 0 0" bboxSize="60.0 32.0 34.0"/></Transform>
   <Transform translation="245.0 20.0 0.0"><Inline DEF="R_the-gate" load="false" url='"rooms/the-gate.x3d"' bboxCenter="0 0 0" bboxSize="4.5 12.0 12.0"/></Transform>
@@ -80,16 +80,6 @@
   <Transform translation="297.0 35.0 0.0"><Inline DEF="R_merriams-chamber" load="false" url='"rooms/merriams-chamber.x3d"' bboxCenter="0 0 0" bboxSize="28.0 22.0 24.0"/></Transform>
   <Transform translation="275.0 -78.0 0.0"><Inline DEF="R_chamber-two" load="false" url='"rooms/chamber-two.x3d"' bboxCenter="0 0 0" bboxSize="34.0 24.0 28.0"/></Transform>
   <Transform translation="275.0 -86.0 0.0"><Inline DEF="R_magic-pool" load="false" url='"rooms/magic-pool.x3d"' bboxCenter="0 0 0" bboxSize="16.0 0.1 16.0"/></Transform>
-  <Transform translation="31.0 20.4 0.0"><ProximitySensor DEF="P_pcc_nw_chimney" size="28.0 47.0 28.0" center="0 0 0"/></Transform>
-  <Transform translation="31.0 20.2 4.0"><ProximitySensor DEF="P_pcc_nw_grotto" size="72.0 55.0 28.0" center="0 0 0"/></Transform>
-  <Transform translation="45.0 19.8 14.0"><ProximitySensor DEF="P_pcc_buried_galleries" size="50.0 56.0 48.0" center="0 0 0"/></Transform>
-  <Transform translation="17.0 -0.2 28.0"><ProximitySensor DEF="P_pcc_low_tunnel" size="46.0 28.0 28.0" center="0 0 0"/></Transform>
-  <Transform translation="30.0 1.5 35.0"><ProximitySensor DEF="P_pcc_semicircular_passage" size="28.0 28.0 34.0" center="0 0 0"/></Transform>
-  <Transform translation="74.0 21.8 0.0"><ProximitySensor DEF="P_pcc_se_fan" size="48.0 52.0 28.0" center="0 0 0"/></Transform>
-  <Transform translation="90.0 16.5 0.0"><ProximitySensor DEF="P_pcc_se_chimney" size="28.0 41.0 28.0" center="0 0 0"/></Transform>
-  <Transform translation="94.0 17.2 5.0"><ProximitySensor DEF="P_pcc_se_chute_pocket" size="28.0 40.0 30.0" center="0 0 0"/></Transform>
-  <Transform translation="61.0 21.8 -11.5"><ProximitySensor DEF="P_pcc_east_pocket" size="28.0 52.0 43.0" center="0 0 0"/></Transform>
-  <Transform translation="140.0 22.5 0.0"><ProximitySensor DEF="P_entrance" size="70.0 35.0 28.0" center="0 0 0"/></Transform>
   <Transform translation="156.0 21.5 6.0"><ProximitySensor DEF="P_porcupine-entrance" size="38.0 37.0 32.0" center="0 0 0"/></Transform>
   <Transform translation="190.0 26.5 0.0"><ProximitySensor DEF="P_pleistocene-hall" size="70.0 28.0 28.0" center="0 0 0"/></Transform>
   <Transform translation="230.0 21.5 0.0"><ProximitySensor DEF="P_the-gate" size="50.0 28.0 28.0" center="0 0 0"/></Transform>
@@ -97,16 +87,6 @@
   <Transform translation="279.0 27.0 0.0"><ProximitySensor DEF="P_merriams-chamber" size="56.0 36.0 28.0" center="0 0 0"/></Transform>
   <Transform translation="268.0 -29.5 0.0"><ProximitySensor DEF="P_chamber-two" size="34.0 72.0 28.0" center="0 0 0"/></Transform>
   <Transform translation="275.0 -82.0 0.0"><ProximitySensor DEF="P_magic-pool" size="28.0 28.0 28.0" center="0 0 0"/></Transform>
-  <ROUTE fromNode="P_pcc_nw_chimney" fromField="isActive" toNode="R_pcc_nw_chimney" toField="load"/>
-  <ROUTE fromNode="P_pcc_nw_grotto" fromField="isActive" toNode="R_pcc_nw_grotto" toField="load"/>
-  <ROUTE fromNode="P_pcc_buried_galleries" fromField="isActive" toNode="R_pcc_buried_galleries" toField="load"/>
-  <ROUTE fromNode="P_pcc_low_tunnel" fromField="isActive" toNode="R_pcc_low_tunnel" toField="load"/>
-  <ROUTE fromNode="P_pcc_semicircular_passage" fromField="isActive" toNode="R_pcc_semicircular_passage" toField="load"/>
-  <ROUTE fromNode="P_pcc_se_fan" fromField="isActive" toNode="R_pcc_se_fan" toField="load"/>
-  <ROUTE fromNode="P_pcc_se_chimney" fromField="isActive" toNode="R_pcc_se_chimney" toField="load"/>
-  <ROUTE fromNode="P_pcc_se_chute_pocket" fromField="isActive" toNode="R_pcc_se_chute_pocket" toField="load"/>
-  <ROUTE fromNode="P_pcc_east_pocket" fromField="isActive" toNode="R_pcc_east_pocket" toField="load"/>
-  <ROUTE fromNode="P_entrance" fromField="isActive" toNode="R_entrance" toField="load"/>
   <ROUTE fromNode="P_porcupine-entrance" fromField="isActive" toNode="R_porcupine-entrance" toField="load"/>
   <ROUTE fromNode="P_pleistocene-hall" fromField="isActive" toNode="R_pleistocene-hall" toField="load"/>
   <ROUTE fromNode="P_the-gate" fromField="isActive" toNode="R_the-gate" toField="load"/>

@@ -8,33 +8,116 @@ if (location.protocol === 'file:') {
       + 'font-family:Georgia,serif;text-align:center';
     document.body.innerHTML = '<div style="max-width:540px;padding:24px;line-height:1.6">'
       + '<h2 style="color:#e9d9b8">Start the local viewer</h2>'
-      + '<p>This 3-D level streams its rooms over <b>http</b>. Browsers block reading '
-      + '3-D files over <code>file://</code>, so opening this page by double-click shows nothing.</p>'
-      + '<p>In Terminal, from the project folder, run:</p>'
-      + '<p style="background:#1d1a14;padding:10px 16px;border-radius:6px;'
-      + 'display:inline-block;font-family:monospace">./start_caves.sh</p>'
-      + '<p>then open <b>http://127.0.0.1:8099/walk_in_archive.html</b>.</p></div>';
+      + '<p>This level streams its rooms over <b>http</b>; browsers block <code>file://</code>. '
+      + 'Run <b style="font-family:monospace">./start_caves.sh</b> then open '
+      + '<b>http://127.0.0.1:8099/walk_in_archive.html</b>.</p></div>';
   });
 }
 </script>
 <script src="https://cdn.jsdelivr.net/npm/x_ite@15.1.4/dist/x_ite.min.js"></script>
 <style>
- html,body{margin:0;background:#000;color:#cdbfa6;font-family:Georgia,serif}
+ html,body{margin:0;background:#000;color:#cdbfa6;font-family:Georgia,serif;overflow:hidden}
  x3d-canvas,canvas{width:100vw;height:100vh;display:block}
- .cap{position:fixed;left:18px;bottom:14px;max-width:560px;font-size:13px;
-   line-height:1.45;text-shadow:0 1px 3px #000;z-index:10}
+ #hud{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;
+   z-index:20;pointer-events:none;text-align:center}
+ #hud .panel{background:rgba(10,10,12,.72);border:1px solid #3a342a;border-radius:12px;
+   padding:22px 30px;max-width:520px;font-size:15px;line-height:1.6;color:#e9d9b8;
+   text-shadow:0 1px 3px #000}
+ #hud b{color:#f0c088}
+ #xhair{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);z-index:15;
+   color:#e9d9b8;opacity:.5;font-size:18px;display:none}
+ .cap{position:fixed;left:16px;bottom:12px;max-width:560px;font-size:12.5px;line-height:1.4;
+   text-shadow:0 1px 3px #000;z-index:15;opacity:.9}
  .cap b{color:#e9d9b8}
- .home{position:fixed;left:18px;top:14px;font-size:13px;z-index:10}
- .home a{color:#cdbfa6;opacity:.75;text-decoration:none}
+ .home{position:fixed;left:16px;top:12px;font-size:13px;z-index:15}
+ .home a{color:#cdbfa6;opacity:.7;text-decoration:none}
 </style></head>
 <body>
-<x3d-canvas src="walk_in_archive.x3d"></x3d-canvas>
+<x3d-canvas id="cv" src="walk_in_archive.x3d"></x3d-canvas>
+<div id="xhair">+</div>
+<div id="hud"><div class="panel"><b>Click to enter the cave</b><br>
+  <b>W&nbsp;A&nbsp;S&nbsp;D</b> walk &nbsp;&middot;&nbsp; <b>mouse</b> look &nbsp;&middot;&nbsp;
+  <b>Space&nbsp;/&nbsp;Shift</b> up&nbsp;/&nbsp;down &nbsp;&middot;&nbsp; <b>Esc</b> to release the mouse
+  <div style="opacity:.6;font-size:12px;margin-top:10px">You spawn in the great room. Walk to the
+  edges and the next chambers stream out of the dark. Use Space to rise up the chimneys / Shift to
+  drop down the pits.</div></div></div>
 <div class="home"><a href="caves.html">&larr; all caves</a></div>
-<div class="cap"><b>The Walk-In Archive.</b> Every surveyed room of <b>Potter&nbsp;Creek</b> and
-<b>Samwel</b> at true scale in one space &mdash; the arched entrance, the 42&nbsp;ft great pit, the
-great room and its breccia fans, the buried galleries, then across to Samwel: Pleistocene Hall, the
-Gate, Chamber One, Merriam&rsquo;s Chamber, and down the ~90&nbsp;ft drop to Chamber Two and the
-sacred Magic Pool. Rooms <i>stream in and dither out of the dark</i> as you near them.
-<span style="opacity:.8">Drag to look; arrow keys / WASD to move (FLY for the vertical drops).
-Each label cites its survey; the cross-cave corridor is flagged interpretive.</span></div>
+<div class="cap"><b>The Walk-In Archive.</b> Every surveyed room of Potter&nbsp;Creek &amp; Samwel at
+true scale; rooms stream in and dither out of the dark. Each label cites its survey; the cross-cave
+gap is flagged interpretive.</div>
+
+<script>
+(function () {
+  const cv = document.getElementById('cv'), hud = document.getElementById('hud'),
+        xh = document.getElementById('xhair');
+  let vp = null, ready = false, locked = false;
+  const keys = Object.create(null);
+  const st = { x: 46, y: 5, z: -2, yaw: -Math.PI / 2, pitch: 0 };   // yaw=-PI/2 => face +x
+
+  function acquire() {
+    try {
+      const sc = cv.browser && cv.browser.currentScene;
+      if (!sc) return false;
+      vp = sc.getNamedNode('Spawn');
+      const p = vp.position; st.x = p.x; st.y = p.y; st.z = p.z;
+      ready = true;
+      console.log('[FPS] viewpoint acquired', st);
+      requestAnimationFrame(loop);
+      return true;
+    } catch (e) { return false; }
+  }
+  const iv = setInterval(() => { if (acquire()) clearInterval(iv); }, 250);
+  setTimeout(() => { if (!ready) console.warn('[FPS] could not acquire viewpoint -- X_ITE drag-nav still works'); }, 6000);
+
+  cv.addEventListener('click', () => { if (cv.requestPointerLock) cv.requestPointerLock(); });
+  document.addEventListener('pointerlockchange', () => {
+    locked = (document.pointerLockElement === cv);
+    hud.style.display = locked ? 'none' : 'flex';
+    xh.style.display = locked ? 'block' : 'none';
+  });
+  document.addEventListener('mousemove', e => {
+    if (!locked) return;
+    st.yaw -= e.movementX * 0.0022;
+    st.pitch -= e.movementY * 0.0022;
+    const m = 1.5533; st.pitch = Math.max(-m, Math.min(m, st.pitch));
+  });
+  addEventListener('keydown', e => {
+    keys[e.code] = true;
+    if (locked && ['KeyW','KeyA','KeyS','KeyD','Space','ShiftLeft','ShiftRight','ControlLeft'].includes(e.code)) e.preventDefault();
+  });
+  addEventListener('keyup', e => { keys[e.code] = false; });
+
+  function apply() {
+    try {
+      const p = vp.position; p.x = st.x; p.y = st.y; p.z = st.z; vp.position = p;
+      const cy = Math.cos(st.yaw / 2), sy = Math.sin(st.yaw / 2),
+            cp = Math.cos(st.pitch / 2), sp = Math.sin(st.pitch / 2);
+      let w = cy * cp, x = cy * sp, y = sy * cp, z = -sy * sp;       // q = qYaw * qPitch
+      const s = Math.sqrt(Math.max(0, 1 - w * w)), o = vp.orientation;
+      if (s < 1e-4) { o.x = 0; o.y = 1; o.z = 0; o.angle = 0; }
+      else { o.x = x / s; o.y = y / s; o.z = z / s; o.angle = 2 * Math.acos(Math.max(-1, Math.min(1, w))); }
+      vp.orientation = o;
+    } catch (e) { /* keep going */ }
+  }
+  let last = performance.now();
+  function loop(t) {
+    const dt = Math.min(0.05, (t - last) / 1000); last = t;
+    if (ready && vp) {
+      const sp = 32 * dt;
+      const fx = -Math.sin(st.yaw), fz = -Math.cos(st.yaw);          // forward (yaw only)
+      const rx = Math.cos(st.yaw),  rz = -Math.sin(st.yaw);          // right
+      let mx = 0, my = 0, mz = 0;
+      if (keys['KeyW']) { mx += fx; mz += fz; }
+      if (keys['KeyS']) { mx -= fx; mz -= fz; }
+      if (keys['KeyD']) { mx += rx; mz += rz; }
+      if (keys['KeyA']) { mx -= rx; mz -= rz; }
+      if (keys['Space']) my += 1;
+      if (keys['ShiftLeft'] || keys['ShiftRight'] || keys['ControlLeft']) my -= 1;
+      if (mx || my || mz) { st.x += mx * sp; st.y += my * sp; st.z += mz * sp; }
+      apply();
+    }
+    requestAnimationFrame(loop);
+  }
+})();
+</script>
 </body></html>
