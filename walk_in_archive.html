@@ -38,7 +38,7 @@ if (location.protocol === 'file:') {
 <div id="hud"><div class="panel"><b>Click to enter the cave</b><br>
   <b>W&nbsp;A&nbsp;S&nbsp;D</b> walk &nbsp;&middot;&nbsp; <b>mouse</b> look &nbsp;&middot;&nbsp;
   <b>Space&nbsp;/&nbsp;Shift</b> up&nbsp;/&nbsp;down &nbsp;&middot;&nbsp; <b>Esc</b> to release the mouse
-  <div style="opacity:.6;font-size:12px;margin-top:10px">You spawn in the great room. Walk to the
+  <div style="opacity:.6;font-size:12px;margin-top:10px">You <b>are</b> the LOA5 anatomical skeleton &mdash; look down to see your own bones. You spawn in the great room. Walk to the
   edges and the next chambers stream out of the dark. Use Space to rise up the chimneys / Shift to
   drop down the pits.</div></div></div>
 <div class="home"><a href="caves.html">&larr; all caves</a></div>
@@ -50,15 +50,17 @@ gap is flagged interpretive.</div>
 (function () {
   const cv = document.getElementById('cv'), hud = document.getElementById('hud'),
         xh = document.getElementById('xhair');
-  let vp = null, ready = false, locked = false;
+  let vp = null, pl = null, ready = false, locked = false;
+  const EYE = 5.2;                                                  // camera height above the skeleton's feet (ft)
   const keys = Object.create(null);
-  const st = { x: 46, y: 5, z: -2, yaw: -Math.PI / 2, pitch: 0 };   // yaw=-PI/2 => face +x
+  const st = { x: 46, y: 5.2, z: -2, yaw: -Math.PI / 2, pitch: -0.3 };  // yaw=-PI/2 => face +x
 
   function acquire() {
     try {
       const sc = cv.browser && cv.browser.currentScene;
       if (!sc) return false;
       vp = sc.getNamedNode('Spawn');
+      try { pl = sc.getNamedNode('Player'); } catch (e) { pl = null; }
       const p = vp.position; st.x = p.x; st.y = p.y; st.z = p.z;
       ready = true;
       console.log('[FPS] viewpoint acquired', st);
@@ -97,6 +99,10 @@ gap is flagged interpretive.</div>
       if (s < 1e-4) { o.x = 0; o.y = 1; o.z = 0; o.angle = 0; }
       else { o.x = x / s; o.y = y / s; o.z = z / s; o.angle = 2 * Math.acos(Math.max(-1, Math.min(1, w))); }
       vp.orientation = o;
+      if (pl) {                                                      // the skeleton avatar follows below, faces the heading
+        const q = pl.translation; q.x = st.x; q.y = st.y - EYE; q.z = st.z; pl.translation = q;
+        const pr = pl.rotation; pr.x = 0; pr.y = 1; pr.z = 0; pr.angle = st.yaw + Math.PI; pl.rotation = pr;
+      }
     } catch (e) { /* keep going */ }
   }
   let last = performance.now();
