@@ -37,7 +37,7 @@ if (location.protocol === 'file:') {
 <div id="xhair">+</div>
 <div id="hud"><div class="panel"><b>Click to enter the cave</b><br>
   <b>W&nbsp;A&nbsp;S&nbsp;D</b> walk &nbsp;&middot;&nbsp; <b>mouse</b> look &nbsp;&middot;&nbsp;
-  <b>Space&nbsp;/&nbsp;Shift</b> up&nbsp;/&nbsp;down &nbsp;&middot;&nbsp; <b>Esc</b> to release the mouse
+  <b>Space&nbsp;/&nbsp;Shift</b> up&nbsp;/&nbsp;down &nbsp;&middot;&nbsp; <b>L</b> lights on / fog off (see it all) &nbsp;&middot;&nbsp; <b>Esc</b> release
   <div style="opacity:.6;font-size:12px;margin-top:10px">You <b>are</b> the LOA5 anatomical skeleton &mdash; look down to see your own bones. You spawn in the great room. Walk to the
   edges and the next chambers stream out of the dark. Use Space to rise up the chimneys / Shift to
   drop down the pits.</div></div></div>
@@ -51,6 +51,7 @@ gap is flagged interpretive.</div>
   const cv = document.getElementById('cv'), hud = document.getElementById('hud'),
         xh = document.getElementById('xhair');
   let vp = null, pl = null, ready = false, locked = false;
+  let fog = null, sun = null, fill1 = null, fill2 = null, scene = null, lit = false;
   const EYE = 5.2;                                                  // camera height above the skeleton's feet (ft)
   const keys = Object.create(null);
   const st = { x: 46, y: 5.2, z: -2, yaw: -Math.PI / 2, pitch: -0.3 };  // yaw=-PI/2 => face +x
@@ -61,6 +62,9 @@ gap is flagged interpretive.</div>
       if (!sc) return false;
       vp = sc.getNamedNode('Spawn');
       try { pl = sc.getNamedNode('Player'); } catch (e) { pl = null; }
+      scene = sc;
+      try { fog = sc.getNamedNode('WorldFog'); sun = sc.getNamedNode('Sun');
+            fill1 = sc.getNamedNode('Fill1'); fill2 = sc.getNamedNode('Fill2'); } catch (e) {}
       const p = vp.position; st.x = p.x; st.y = p.y; st.z = p.z;
       ready = true;
       console.log('[FPS] viewpoint acquired', st);
@@ -83,8 +87,21 @@ gap is flagged interpretive.</div>
     st.pitch -= e.movementY * 0.0022;
     const m = 1.5533; st.pitch = Math.max(-m, Math.min(m, st.pitch));
   });
+  function toggleLights() {
+    lit = !lit;
+    try {
+      if (fog) fog.visibilityRange = lit ? 0 : 80;           // 0 disables fog (X3D)
+      if (sun) sun.intensity = lit ? 1.15 : 0.32;
+      if (fill1) fill1.intensity = lit ? 0.6 : 0;
+      if (fill2) fill2.intensity = lit ? 0.5 : 0;
+      if (lit && scene) ['R_porcupine-entrance','R_pleistocene-hall','R_the-gate','R_chamber-one',
+        'R_merriams-chamber','R_chamber-two','R_magic-pool']
+        .forEach(id => { try { scene.getNamedNode(id).load = true; } catch (e) {} });
+    } catch (e) {}
+  }
   addEventListener('keydown', e => {
     keys[e.code] = true;
+    if (e.code === 'KeyL') toggleLights();
     if (locked && ['KeyW','KeyA','KeyS','KeyD','Space','ShiftLeft','ShiftRight','ControlLeft'].includes(e.code)) e.preventDefault();
   });
   addEventListener('keyup', e => { keys[e.code] = false; });
